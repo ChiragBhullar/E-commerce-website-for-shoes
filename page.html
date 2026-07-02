@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StepNova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2 class="logo">Step<span>Nova</span></h2>
+        <div class="search-box">
+            <input type="text" placeholder="Search shoes...">
+            <button>🔍</button>
+        </div>
+        <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#orders">Orders</a></li>
+            <li class="cart-link"><a href="#cart">Cart</a><span class="cart-badge" id="cart-badge">0</span></li>
+            <li><a href="#wishlist">Wishlist</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to StepNova</h1>
+        <p>Your one-stop shop for the latest athletic wear and footwear.</p>
+        <button class="shop-btn" onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <section id="products">
+        <h2 class="section-title">Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p1" onclick="toggleWishlist('p1', this)">♡</button>
+                <h3>Nike Air Max</h3>
+                <img src="images/nikeairmax.webp" alt="Nike Air Max">
+                <p>⭐⭐⭐⭐⭐ (245)</p>
+                <p>Experience unparalleled comfort and style with the Nike Air Max.</p>
+                <p class="price">Price: $129.99</p>
+                <button onclick="addToCart('p1')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p2" onclick="toggleWishlist('p2', this)">♡</button>
+                <h3>Adidas Ultraboost</h3>
+                <img src="images/adidasultraboost.webp" alt="Adidas Ultraboost">
+                <p>⭐⭐⭐⭐⭐ (189)</p>
+                <p>Experience unmatched performance and comfort with the Adidas Ultraboost.</p>
+                <p class="price">Price: $159.99</p>
+                <button onclick="addToCart('p2')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p3" onclick="toggleWishlist('p3', this)">♡</button>
+                <h3>Puma RS-X</h3>
+                <img src="images/pumarSX.webp" alt="Puma RS-X">
+                <p>⭐⭐⭐⭐⭐ (156)</p>
+                <p>Step into the future of footwear with the Puma RS-X.</p>
+                <p class="price">Price: $99.99</p>
+                <button onclick="addToCart('p3')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p4" onclick="toggleWishlist('p4', this)">♡</button>
+                <h3>Reebok Nano X</h3>
+                <img src="images/reeboknanox.webp" alt="Reebok Nano X">
+                <p>⭐⭐⭐⭐⭐ (123)</p>
+                <p>Elevate your training with the Reebok Nano X, designed for ultimate performance.</p>
+                <p class="price">Price: $129.99</p>
+                <button onclick="addToCart('p4')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p5" onclick="toggleWishlist('p5', this)">♡</button>
+                <h3>New Balance 990v5</h3>
+                <img src="images/newbalance990v5.webp" alt="New Balance">
+                <p>⭐⭐⭐⭐⭐ (245)</p>
+                <p>Classic style meets modern comfort with the New Balance 990v5.</p>
+                <p class="price">Price: $174.99</p>
+                <button onclick="addToCart('p5')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p6" onclick="toggleWishlist('p6', this)">♡</button>
+                <h3>Asics Gel-Kayano 27</h3>
+                <img src="images/asicsgelkayano27.webp" alt="Asics Gel-Kayano 27">
+                <p>⭐⭐⭐⭐⭐ (189)</p>
+                <p>Run with confidence and support in the Asics Gel-Kayano 27.</p>
+                <p class="price">Price: $159.99</p>
+                <button onclick="addToCart('p6')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p7" onclick="toggleWishlist('p7', this)">♡</button>
+                <h3>Under Armour HOVR Phantom</h3>
+                <img src="images/underarmour.webp" alt="Under Armour HOVR Phantom">
+                <p>⭐⭐⭐⭐⭐ (156)</p>
+                <p>Experience the perfect blend of cushioning and responsiveness with the Under Armour HOVR Phantom.</p>
+                <p class="price">Price: $139.99</p>
+                <button onclick="addToCart('p7')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p8" onclick="toggleWishlist('p8', this)">♡</button>
+                <h3>Brooks Ghost 13</h3>
+                <img src="images/broolsgghost.webp" alt="Brooks Ghost 13">
+                <p>⭐⭐⭐⭐⭐ (245)</p>
+                <p>Run smoothly and comfortably with the Brooks Ghost 13, designed for long-distance runners.</p>
+                <p class="price">Price: $129.99</p>
+                <button onclick="addToCart('p8')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p9" onclick="toggleWishlist('p9', this)">♡</button>
+                <h3>Saucony Triumph 18</h3>
+                <img src="images/saucony.jpg" alt="Saucony Triumph 18">
+                <p>⭐⭐⭐⭐⭐ (245)</p>
+                <p>Experience superior cushioning and support with the Saucony Triumph 18.</p>
+                <p class="price">Price: $149.99</p>
+                <button onclick="addToCart('p9')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p10" onclick="toggleWishlist('p10', this)">♡</button>
+                <h3>Hoka One One Clifton 7</h3>
+                <img src="images/hokaclifton7.webp" alt="Hoka One One Clifton 7">
+                <p>⭐⭐⭐⭐⭐ (189)</p>
+                <p>Enjoy a plush and comfortable ride with the Hoka One One Clifton 7.</p>
+                <p class="price">Price: $139.99</p>
+                <button onclick="addToCart('p10')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p11" onclick="toggleWishlist('p11', this)">♡</button>
+                <h3>Salomon Speedcross 5</h3>
+                <img src="images/salomonspeedcross5.jpg" alt="Salomon Speedcross 5">
+                <p>⭐⭐⭐⭐⭐ (156)</p>
+                <p>Conquer any terrain with the Salomon Speedcross 5, designed for trail running.</p>
+                <p class="price">Price: $129.99</p>
+                <button onclick="addToCart('p11')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <button class="wishlist-btn" data-id="p12" onclick="toggleWishlist('p12', this)">♡</button>
+                <h3>Merrell Moab 2</h3>
+                <img src="images/merrellmoab2.jpg" alt="Merrell Moab 2">
+                <p>⭐⭐⭐⭐⭐ (123)</p>
+                <p>Explore the outdoors with confidence in the Merrell Moab 2 hiking shoes.</p>
+                <p class="price">Price: $99.99</p>
+                <button onclick="addToCart('p12')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="orders">
+        <h2 class="section-title">Orders</h2>
+        <div class="orders-list" id="orders-list"></div>
+    </section>
+
+    <section id="cart">
+        <h2 class="section-title">Your Cart</h2>
+        <div class="cart-list" id="cart-list"></div>
+        <div class="cart-summary" id="cart-summary" style="display:none;">
+            <h3>Total: <span id="cart-total">$0.00</span></h3>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </section>
+
+    <section id="wishlist">
+        <h2 class="section-title">Wishlist</h2>
+        <div class="products" id="wishlist-grid"></div>
+    </section>
+
+    <section id="profile">
+        <h2 class="section-title">Profile</h2>
+        <div class="profile-wrap">
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-name">Full Name</label>
+                    <input type="text" id="profile-name" placeholder="Chirag">
+                </div>
+                <div class="form-group">
+                    <label for="profile-email">Email</label>
+                    <input type="email" id="profile-email" placeholder="chirag123.com">
+                </div>
+                <div class="form-group">
+                    <label for="profile-address">Shipping Address</label>
+                    <textarea id="profile-address" placeholder="Sec-62,Noida"></textarea>
+                </div>
+                <button type="submit" class="save-btn">Save Profile</button>
+                <p class="form-success" id="profile-success">Profile saved successfully!</p>
+            </form>
+        </div>
+    </section>
+
+    <section id="settings">
+        <h2 class="section-title">Settings</h2>
+        <div class="settings-wrap">
+            <div class="setting-row">
+                <div>
+                    <h4>Email Notifications</h4>
+                    <p>Get emails about promotions and new arrivals</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="setting-email">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-row">
+                <div>
+                    <h4>Order Updates</h4>
+                    <p>Get notified about shipping and delivery status</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="setting-orders">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="setting-row">
+                <div>
+                    <h4>Newsletter</h4>
+                    <p>Receive our weekly newsletter</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="setting-newsletter">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-wrap">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What is your return policy?
+                    <span class="arrow">+</span>
+                </div>
+                <div class="faq-answer"><p>You can return any unworn shoes within 30 days of delivery for a full refund.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How long does shipping take?
+                    <span class="arrow">+</span>
+                </div>
+                <div class="faq-answer"><p>Standard shipping takes 3–5 business days. Express shipping arrives in 1–2 business days.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do you offer international shipping?
+                    <span class="arrow">+</span>
+                </div>
+                <div class="faq-answer"><p>Yes, we ship to most countries. International delivery times vary by destination.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I track my order?
+                    <span class="arrow">+</span>
+                </div>
+                <div class="faq-answer"><p>Once your order ships, you'll find its status in the Orders section of your account.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="support">
+        <h2 class="section-title">Support</h2>
+        <p class="support-info">Have a question we didn't cover in the FAQ? Send us a message and our team will get back to you shortly.</p>
+        <div class="support-wrap">
+            <form id="support-form">
+                <div class="form-group">
+                    <label for="support-name">Name</label>
+                    <input type="text" id="support-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="support-email">Email</label>
+                    <input type="email" id="support-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="support-message">Message</label>
+                    <textarea id="support-message" required></textarea>
+                </div>
+                <button type="submit" class="save-btn">Send Message</button>
+                <p class="form-success" id="support-success">Message sent! We'll be in touch soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
